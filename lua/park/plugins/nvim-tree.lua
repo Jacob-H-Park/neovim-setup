@@ -58,10 +58,10 @@ nvimtree.setup({
 	renderer = {
 		highlight_git = true,
 		git = {
-			enable = false,
-			ignore = false,
+			enable = true,
+			ignore = true,
 			show_on_dirs = false,
-			show_on_open_dirs = false,
+			show_on_open_dirs = true,
 			timeout = 400,
 		},
 		icons = {
