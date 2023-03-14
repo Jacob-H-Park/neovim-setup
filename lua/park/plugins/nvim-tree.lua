@@ -22,13 +22,13 @@ local function my_on_attach(bufnr)
 	vim.keymap.set("n", "<Tab>", api.node.open.preview, opts("Open Preview"))
 	vim.keymap.set("n", "a", api.fs.create, opts("Create"))
 	vim.keymap.set("n", "d", api.fs.remove, opts("Delete"))
-	vim.keymap.set("n", "E", api.tree.expand_all, opts("Expand All"))
+	vim.keymap.set("n", "<C-e>", api.tree.expand_all, opts("Expand All"))
 	vim.keymap.set("n", "F", api.live_filter.clear, opts("Clean Filter"))
 	vim.keymap.set("n", "f", api.live_filter.start, opts("Filter"))
 	vim.keymap.set("n", "gy", api.fs.copy.absolute_path, opts("Copy Absolute Path"))
 	vim.keymap.set("n", "r", api.fs.rename, opts("Rename Inc. Ext."))
 	vim.keymap.set("n", "R", api.fs.rename_basename, opts("Rename Exc. Ext"))
-	vim.keymap.set("n", "W", api.tree.collapse_all, opts("Collapse"))
+	vim.keymap.set("n", "<C-w>", api.tree.collapse_all, opts("Collapse"))
 	vim.keymap.set("n", "x", api.fs.cut, opts("Cut"))
 	vim.keymap.set("n", "Y", api.fs.copy.relative_path, opts("Copy Relative Path"))
 	vim.keymap.set("n", "<2-LeftMouse>", api.node.open.edit, opts("Open"))
@@ -57,13 +57,6 @@ nvimtree.setup({
 	on_attach = my_on_attach,
 	renderer = {
 		highlight_git = true,
-		git = {
-			enable = true,
-			ignore = true,
-			show_on_dirs = false,
-			show_on_open_dirs = true,
-			timeout = 400,
-		},
 		icons = {
 			git_placement = "after",
 			glyphs = {
@@ -73,7 +66,26 @@ nvimtree.setup({
 				},
 			},
 		},
+		indent_markers = {
+			enable = true,
+			inline_arrows = true,
+			icons = {
+				corner = "└",
+				edge = "│",
+				item = "│",
+				bottom = "─",
+				none = " ",
+			},
+		},
 	},
+	git = {
+		enable = true,
+		ignore = true,
+		show_on_dirs = false,
+		show_on_open_dirs = true,
+		timeout = 400,
+	},
+
 	-- disable window_picker for
 	-- explorer to work well with
 	-- window splits
@@ -87,9 +99,9 @@ nvimtree.setup({
 	diagnostics = {
 		enable = true,
 	},
-	-- 	git = {
-	-- 		ignore = false,
-	-- 	},
+	filters = {
+		dotfiles = true,
+	},
 })
 
 -- open nvim-tree on setup
