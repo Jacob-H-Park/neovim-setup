@@ -35,11 +35,11 @@ keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
 -- Move Text Up and Down --
-keymap.set("n", "∆", "<Esc>:m .+1<CR>==", opts)
-keymap.set("n", "˚", "<Esc>:m .-2<CR>==", opts)
+keymap.set("n", "∆", "<Esc>:m .+1<CR>==", opts) -- alt or option + k
+keymap.set("n", "˚", "<Esc>:m .-2<CR>==", opts) -- alt or option + j
 keymap.set("x", "K", ":move '>+1<CR>gv-gv", opts)
-keymap.set("x", "∆", ":move '>+1<CR>gv-gv", opts)
 keymap.set("x", "J", ":move '<-2<CR>gv-gv", opts)
+keymap.set("x", "∆", ":move '>+1<CR>gv-gv", opts)
 keymap.set("x", "˚", ":move '<-2<CR>gv-gv", opts)
 ----------------------
 -- Plugin Keybinds
