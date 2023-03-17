@@ -22,7 +22,7 @@ local function my_on_attach(bufnr)
 	vim.keymap.set("n", "<Tab>", api.node.open.preview, opts("Open Preview"))
 	vim.keymap.set("n", "a", api.fs.create, opts("Create"))
 	vim.keymap.set("n", "d", api.fs.remove, opts("Delete"))
-	vim.keymap.set("n", "<C-e>", api.tree.expand_all, opts("Expand All"))
+	vim.keymap.set("n", "<C-e>", api.tree.expand_all, opts("Expand All")) -- take a look at *nvim-tree.actions.expand_all.exclude*
 	vim.keymap.set("n", "F", api.live_filter.clear, opts("Clean Filter"))
 	vim.keymap.set("n", "f", api.live_filter.start, opts("Filter"))
 	vim.keymap.set("n", "gy", api.fs.copy.absolute_path, opts("Copy Absolute Path"))
@@ -40,9 +40,8 @@ local function my_on_attach(bufnr)
 	vim.keymap.set("n", "p", function()
 		local node = api.tree.get_node_under_cursor()
 		print(node.absolute_path)
-	end, opts("Print Node Path"))
-
-	vim.keymap.set("n", "Z", api.node.run.system, opts("Run System"))
+	end, opts("Print File Path"))
+	-- vim.keymap.set("n", "Z", api.node.run.system, opts("Run System")) -- this opens the file in VS Code right now
 end
 -- recommended settings from nvim-tree documentation
 vim.g.loaded_netrw = 1
@@ -60,9 +59,19 @@ nvimtree.setup({
 		icons = {
 			git_placement = "after",
 			glyphs = {
+				default = "",
+				symlink = "",
+				bookmark = "",
+				modified = "●",
 				folder = {
-					arrow_closed = "", -- arrow when folder is closed
-					arrow_open = "", -- arrow when folder is open
+					arrow_closed = "",
+					arrow_open = "",
+					default = "",
+					open = "",
+					empty = "",
+					empty_open = "",
+					symlink = "",
+					symlink_open = "",
 				},
 			},
 		},

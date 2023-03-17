@@ -23,7 +23,6 @@ option.cursorline = true
 -- appearance
 option.termguicolors = true
 option.background = "dark"
-option.signcolumn = "yes"
 
 -- backspace
 option.backspace = "indent,eol,start" -- allow backspace on indent, end of line, or insert mode start position
