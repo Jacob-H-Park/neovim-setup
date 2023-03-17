@@ -80,8 +80,8 @@ nvimtree.setup({
 			inline_arrows = true,
 			icons = {
 				corner = "└",
-				edge = "│",
-				item = "│",
+				edge = "┊",
+				item = "┊",
 				bottom = "─",
 				none = " ",
 			},
