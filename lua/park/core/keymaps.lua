@@ -25,10 +25,10 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 -- navigate buffers
 keymap.set("n", "<S-l>", ":bnext<CR>")
 keymap.set("n", "<S-h>", ":bprevious<CR>")
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new buffer
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current buffer
-keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next buffer
-keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous buffer
+keymap.set("n", "<leader>bo", ":tabnew<CR>") -- open new buffer
+keymap.set("n", "<leader>bx", ":tabclose<CR>") -- close current buffer
+keymap.set("n", "<leader>bn", ":tabn<CR>") -- go to next buffer
+keymap.set("n", "<leader>bp", ":tabp<CR>") -- go to previous buffer
 -- Visual Mode --
 -- Stay in Indent Mode instead of Moving Tabbing Once --
 keymap.set("v", "<", "<gv")
