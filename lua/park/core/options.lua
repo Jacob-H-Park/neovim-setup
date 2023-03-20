@@ -6,7 +6,7 @@ option.number = true
 
 -- wrap
 option.wrap = false -- disable line wrapping
-
+option.whichwrap = "[,]" -- allows left and right arrow keys to move to prev / next lines in INSERT mode. Extra: b(ackspace),s(pace),<,> - arrows in normal mode
 -- tabs & indentation
 option.tabstop = 4 -- # of spaces for a tab
 option.shiftwidth = 4 -- # of spaces inserted for each indentation

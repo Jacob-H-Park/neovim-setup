@@ -19,8 +19,9 @@ keymap.set("n", "<C-Down>", ":resize -2<CR>")
 keymap.set("n", "<C-Left>", ":vertical resize +2<CR>")
 keymap.set("n", "<C-Right>", ":vertical resize -2<CR>")
 
-keymap.set("n", "<C-d>", "<C-d>zz") -- centers the cursor while scrolling
-keymap.set("n", "<C-u>", "<C-u>zz")
+-- keymap.set("n", "<C-d>", "<C-d>zz") -- centers the cursor while scrolling
+keymap.set("n", "<C-u>", "<C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y>")
+keymap.set("n", "<C-d>", "<C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e>")
 
 -- navigate buffers
 keymap.set("n", "<S-l>", ":bnext<CR>")
@@ -72,8 +73,7 @@ keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git bra
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
 -- restart lsp server (not on youtube nvim video)
-keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-
+keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary--
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
