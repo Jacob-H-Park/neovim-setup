@@ -3,3 +3,6 @@ if not status then
 	print("Colorscheme not found!")
 	return
 end
+
+vim.api.nvim_set_hl(0, "Search", { bg = "red", fg = "white" })
+vim.api.nvim_set_hl(0, "IncSearch", { bg = "paleturquoise", fg = "white", bold = true })
