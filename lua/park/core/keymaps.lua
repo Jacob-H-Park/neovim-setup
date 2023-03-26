@@ -20,8 +20,8 @@ keymap.set("n", "<C-Left>", ":vertical resize +2<CR>")
 keymap.set("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- keymap.set("n", "<C-d>", "<C-d>zz") -- centers the cursor while scrolling
-keymap.set("n", "<C-u>", "<C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y>")
-keymap.set("n", "<C-d>", "<C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e>")
+keymap.set("n", "<C-u>", "<C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y><<C-y><C-y>")
+keymap.set("n", "<C-d>", "<C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e><C-e>")
 
 -- navigate buffers
 keymap.set("n", "<S-l>", ":bnext<CR>")

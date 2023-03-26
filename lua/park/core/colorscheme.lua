@@ -5,4 +5,4 @@ if not status then
 end
 
 vim.api.nvim_set_hl(0, "Search", { bg = "red", fg = "white" })
-vim.api.nvim_set_hl(0, "IncSearch", { bg = "paleturquoise", fg = "white", bold = true })
+vim.api.nvim_set_hl(0, "IncSearch", { bg = "turquoise2", fg = "white", bold = true })
