@@ -18,6 +18,7 @@ keymap.set("n", "<C-Up>", ":resize +2<CR>")
 keymap.set("n", "<C-Down>", ":resize -2<CR>")
 keymap.set("n", "<C-Left>", ":vertical resize +2<CR>")
 keymap.set("n", "<C-Right>", ":vertical resize -2<CR>")
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- keymap.set("n", "<C-d>", "<C-d>zz") -- centers the cursor while scrolling
 keymap.set("n", "<C-u>", "<C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y><C-y><<C-y><C-y>")
