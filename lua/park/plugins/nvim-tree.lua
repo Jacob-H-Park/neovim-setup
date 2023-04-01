@@ -54,6 +54,9 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 nvimtree.setup({
 	-- change folder arrow icons
 	on_attach = my_on_attach,
+	view = {
+		width = 40,
+	},
 	renderer = {
 		highlight_git = true,
 		icons = {
